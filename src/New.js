@@ -21,18 +21,6 @@ export default function New() {
     console.log("Form submitted", formData);
     setErrors(Validation(formData));
 
-    if (Object.keys(Validation).length === 0) {
-      try {
-        const response = await axios.post("http://localhost:3000/login", {
-          id: 1,
-          username: formData.email,
-          password: formData.password,
-        });
-        console.log(response.data);
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    }
   };
 
   return (
