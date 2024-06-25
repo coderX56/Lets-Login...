@@ -74,6 +74,7 @@ export default function SignUp() {
           <TextField
             label="Confirm password"
             value={formData.cpassword}
+            onChange={handleChange}
             name="cpassword"
             variant="outlined"
             type="password"
